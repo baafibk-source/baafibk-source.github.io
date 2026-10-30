@@ -1,0 +1,132 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Kwame Baafi Boateng: data scientist (ML and AI engineering), London. XGBoost and SHAP projects with guarded LLM assistants."><title>Kwame Baafi Boateng Portfolio</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f4f0e8;--ink:#14161a;--muted:#555;--green:#0e5a4b;--dark:#14151a;--card:#1d1f26;--line:#d9d3c5}
+html{scroll-behavior:smooth}:root{--px:max(20px,calc((100vw - 828px)/2))}body{background:var(--bg);color:var(--ink);font-family:Inter,sans-serif;font-size:15px;line-height:1.5}
+.serif{font-family:"Bitstream Charter",Charter,Georgia,serif}
+.mono{font-family:"DejaVu Sans Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+a{color:inherit;text-decoration:none}
+.wrap{padding:0 var(--px)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:28px var(--px) 0}
+nav .name{font-weight:700;font-size:19px}
+nav .links{display:flex;gap:26px;align-items:center;font-size:14px}
+.pill{border:1px solid var(--ink);border-radius:999px;padding:9px 20px}
+.hero{padding:84px var(--px) 76px;display:grid;grid-template-columns:1fr 340px;gap:70px}
+.hero .mono{color:#666;margin-bottom:20px}
+h1{font-size:68px;line-height:1.04;font-weight:700;letter-spacing:-.02em}
+h1 em{color:var(--green)}
+.hero p{margin-top:26px;font-size:17px;color:#444;max-width:520px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{border-radius:999px;padding:13px 26px;font-weight:600;font-size:14px}
+.btn.g{background:var(--green);color:#fff}.btn.o{border:1px solid var(--ink)}
+.stats{margin-top:42px;border-top:2px solid var(--ink)}
+.stat{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid var(--line);font-size:13px;color:#444}
+.stat b{font-family:"Bitstream Charter",Georgia,serif;font-size:30px;color:var(--ink)}
+.dark{background:var(--dark);color:#e9e7e2;padding:84px var(--px) 72px}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:46px}
+.sec-head h2{font-size:42px;color:#fff;font-weight:700}
+.sec-head p{max-width:300px;font-size:13px;color:#aaa}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.card{background:var(--card);border-radius:18px;padding:30px 28px}
+.card .top{display:flex;justify-content:space-between;color:#7fcfb8;margin-bottom:18px}
+.card .top.t{color:#e8a88d}.card .top span:last-child{color:#999}
+.card h3{font-size:27px;line-height:1.2;color:#fff;margin-bottom:14px;font-weight:700}
+.card p{font-size:13.5px;color:#d6d4cf;margin-bottom:14px}
+.card ul{padding-left:18px;font-size:13px;color:#e0ded9}.card li{margin-bottom:9px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px}
+.tag{border:1px solid #4a4d57;border-radius:999px;padding:4px 12px;font-size:11.5px;color:#ddd}
+.cbtns{display:flex;gap:12px}
+.cb{background:#f4f0e8;color:#14161a;border-radius:999px;padding:11px 20px;font-weight:600;font-size:13px}
+.cb.o{background:transparent;color:#f4f0e8;border:1px solid #6a6d77}
+.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:34px}
+.mini div{border-top:1px solid #3a3d46;padding-top:14px}
+.mini .mono{color:#8c8f98;margin-bottom:8px;font-size:10.5px}
+.mini h4{font-size:19px;color:#fff;margin-bottom:6px;font-weight:700}
+.mini p{font-size:12.5px;color:#b8b6b0}.mini a{color:#7fcfb8;font-size:12px;display:inline-block;margin-top:6px}
+.how{padding:84px var(--px) 80px;border-bottom:1px solid var(--line)}
+.how h2,.exp h2,.exp h3{font-size:42px;font-weight:700}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:34px}
+.three .n{font-size:40px;color:var(--green);font-weight:700}
+.three h4{font-size:16px;margin:12px 0 8px}.three p{font-size:13px;color:#555}
+.exp{padding:80px var(--px) 70px;display:grid;grid-template-columns:200px 1fr;gap:0 40px}
+.exp .lead{font-size:14px;color:#555;margin-top:14px}
+.row{display:grid;grid-template-columns:110px 1fr;padding:15px 0;border-bottom:1px solid var(--line);font-size:13px}
+.row:first-child{border-top:2px solid var(--ink)}
+.row .y{font-family:"DejaVu Sans Mono",monospace;font-size:11px;color:#666;padding-top:3px}
+.row b{display:block;font-size:15px}.row span{color:#555;font-size:12.5px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.edu{border-top:2px solid var(--ink);padding-top:14px}.edu b{font-size:15px;display:block}.edu span{font-size:12.5px;color:#555}
+.tk{border-top:1px solid var(--line);padding:16px 0;font-size:13px}.tk .mono{color:#777;font-size:10px;margin-bottom:6px}
+.sp{height:44px}
+.foot{background:var(--green);color:#fff;padding:60px var(--px);display:flex;justify-content:space-between;align-items:center}
+.foot h2{font-size:34px;font-weight:700}.foot p{font-size:14px;opacity:.9;margin-top:6px}
+.foot .btn{background:#fff;color:var(--green)}
+@media(max-width:820px){
+nav{flex-direction:column;gap:14px;align-items:flex-start}
+nav .links{gap:16px;flex-wrap:wrap}
+.hero{grid-template-columns:1fr;gap:30px;padding-top:50px}
+h1{font-size:46px}
+.cards,.mini,.three,.two{grid-template-columns:1fr}
+.exp{grid-template-columns:minmax(0,1fr)}.exp>*{grid-column:1/-1!important;min-width:0}
+.sec-head{flex-direction:column;align-items:flex-start;gap:10px}
+.sec-head h2,.how h2,.exp h2{font-size:34px}
+.foot{flex-direction:column;align-items:flex-start;gap:20px}
+.row{grid-template-columns:96px 1fr}
+.card{padding:24px 20px}
+.dark{padding-top:56px}.how,.exp{padding-top:56px}
+}
+@media print{body{width:1080px}}
+</style></head><body>
+<nav><div class="name serif">Kwame Baafi Boateng</div><div class="links"><a href="#p">Projects</a><a href="#a">Approach</a><a href="#e">Experience</a><a class="pill" href="mailto:baafi.bk@gmail.com">Get in touch</a></div></nav>
+<section class="hero"><div><div class="mono">Data scientist · ML &amp; AI engineering · London</div>
+<h1 class="serif">Models that predict, and explain <em>why.</em></h1>
+<p>Six years in FP&amp;A and credit risk, an MSc in Business Analytics (Distinction), and live machine learning apps that pair XGBoost and SHAP with guarded LLM assistants.</p>
+<div class="btns"><a class="btn g" href="#p">See the projects →</a><a class="btn o" href="https://www.linkedin.com/in/kwame-baafi-boateng">LinkedIn</a><a class="btn o" href="https://github.com/baafibk-source">GitHub</a></div></div>
+<div class="stats"><div class="stat">Churn model ROC AUC<b>0.855</b></div><div class="stat">No-shows reached vs random<b>1.9×</b></div><div class="stat">Appointments modelled<b>110k</b></div><div class="stat">Years in finance &amp; credit risk<b>6</b></div></div></section>
+
+<section class="dark" id="p"><div class="sec-head"><h2 class="serif">Selected projects</h2><p>All apps are live. Try an example, read the SHAP drivers, then ask the assistant why.</p></div>
+<div class="cards">
+<div class="card"><div class="top mono"><span>Healthcare · Personal project</span><span>2026</span></div>
+<h3 class="serif">Outpatient No-Show Risk Predictor</h3>
+<p>Predicts which outpatient appointments are likely to be missed, so clinics can focus reminders and rebooking where they matter most.</p>
+<ul><li>XGBoost on 110,516 public appointments, with leakage-safe history features and time-based validation</li>
+<li>Contacting the top 20% highest-risk appointments reaches 37% of no-shows, about 1.9× random</li>
+<li>Calibrated scores, fairness check, drift monitoring and 88 automated tests</li>
+<li>LLM assistant writes staff summaries and patient reminders that never mention risk or history</li></ul>
+<div class="tags"><span class="tag">XGBoost</span><span class="tag">SHAP</span><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">LLM guardrails</span></div>
+<div class="cbtns"><a class="cb" href="https://huggingface.co/spaces/Baafi02/dna-risk-dashboard">Try the live demo ↗</a><a class="cb o" href="https://github.com/baafibk-source/outpatient-no-show-risk">Code ↗</a></div></div>
+<div class="card"><div class="top t mono"><span>Telecom · MSc dissertation</span><span>2026</span></div>
+<h3 class="serif">Customer Churn Predictor with LLM Retention Assistant</h3>
+<p>Turns a dissertation model into a tool a retention team could use: who is at risk, why, and what to do next.</p>
+<ul><li>XGBoost churn classifier (ROC AUC 0.855) on a telecom customer dataset, with calibrated probabilities and SHAP drivers for every customer</li>
+<li>Editable retention-campaign calculator: revenue at risk and estimated net saving</li>
+<li>Retention briefings and driver-linked actions</li>
+<li>Guardrails refined through testing: no invented services, no reciting account details back to customers</li></ul>
+<div class="tags"><span class="tag">XGBoost</span><span class="tag">SHAP</span><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">Prompt design</span></div>
+<div class="cbtns"><a class="cb" href="https://huggingface.co/spaces/Baafi02/churn-risk-dashboard">Try the live demo ↗</a><a class="cb o" href="https://github.com/baafibk-source/churn-risk-dashboard">Code ↗</a></div></div></div>
+<div class="mini">
+<div><div class="mono">MSc coursework</div><h4 class="serif">Credit Card Fraud Detection</h4><p>Isolation Forest and SMOTE on highly imbalanced transactions, evaluated with PR-AUC rather than accuracy.</p></div>
+<div><div class="mono">MSc coursework</div><h4 class="serif">Corporate Network Analysis</h4><p>Toyota's corporate relationships modelled in NetworkX, with an interactive D3.js visualisation.</p></div>
+<div><div class="mono">MSc coursework · Live app</div><h4 class="serif">Hospital Readmission Prediction</h4><p>Logistic regression and support vector classifiers with SHAP and an LLM assistant, deployed with Docker.</p><a href="https://huggingface.co/spaces/Baafi02/Hospital_readmission">Try the live demo ↗</a></div></div></section>
+
+<section class="how" id="a"><h2 class="serif">How I build</h2><div class="three">
+<div><div class="n serif">01</div><h4>The model predicts. The LLM explains.</h4><p>The language model only receives the score and SHAP drivers, and is never allowed to change or invent a number.</p></div>
+<div><div class="n serif">02</div><h4>Guardrails come from testing.</h4><p>I read real outputs, catch the failure, and fix it with a targeted rule, then test again.</p></div>
+<div><div class="n serif">03</div><h4>Know what the data can't see.</h4><p>SHAP shows associations, not causes. Every project states its limits, from data drift to missing complaint history.</p></div></div></section>
+
+<section class="exp" id="e"><div><h2 class="serif">Experience</h2><p class="lead">Finance and risk first, which is why my models come with business context and a plain-English explanation.</p></div>
+<div><div class="row"><div class="y">2024–Present</div><div><b>Theatre Porter</b><span>Chelsea and Westminster Hospital, London</span></div></div>
+<div class="row"><div class="y">2024–2025</div><div><b>Financial Planning &amp; Analysis Analyst</b><span>Connie Avoi Limited, Coventry</span></div></div>
+<div class="row"><div class="y">2023–2024</div><div><b>Budget &amp; Forecasting Analyst</b><span>Koda Healthcare, Tidworth</span></div></div>
+<div class="row"><div class="y">2021–2022</div><div><b>Financial Analyst</b><span>Morgan Stanley, United Kingdom</span></div></div>
+<div class="row"><div class="y">2018–2021</div><div><b>Credit Risk Analyst</b><span>Deloitte, United Kingdom</span></div></div></div>
+<div class="sp" style="grid-column:1/3"></div>
+<h3 class="serif" style="font-size:26px;padding-top:12px">Education</h3>
+<div class="two"><div class="edu"><b>MSc Business Analytics (Distinction)</b><span>University of Greenwich, London · 2025–2026</span></div><div class="edu"><b>BBA Banking and Finance</b><span>Methodist University College, Ghana · 2017</span></div></div>
+<div class="sp" style="grid-column:1/3"></div>
+<h3 class="serif" style="font-size:26px;padding-top:12px">Toolkit</h3>
+<div><div class="two"><div class="tk"><div class="mono">Modelling</div>Python, scikit-learn, XGBoost, SHAP, Isolation Forest, SMOTE, logistic regression</div><div class="tk"><div class="mono">AI engineering</div>LLM integration via Hugging Face, prompt design, output guardrails, FastAPI, Docker</div>
+<div class="tk"><div class="mono">Data &amp; cloud</div>SQL, Power BI, Tableau, Microsoft Azure (DP-203, DP-900, AZ-900)</div><div class="tk"><div class="mono">Finance &amp; risk</div>Credit risk assessment, forecasting, variance analysis, valuation</div></div></div></section>
+<section class="foot"><div><h2 class="serif">Let's talk.</h2><p>baafi.bk@gmail.com · London, UK · <a href="https://www.linkedin.com/in/kwame-baafi-boateng">LinkedIn</a></p></div><a class="btn" href="mailto:baafi.bk@gmail.com">Get in touch</a></section>
+</body></html>
+
